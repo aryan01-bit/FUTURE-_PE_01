@@ -21,6 +21,24 @@ This will make your video **unique** because:
 * *"The Bot’s Tale: How Ronaldo & Messi Became Legends"*
 
 ---
+from PIL import Image, ImageDraw, ImageFont, ImageFilter
+import os
+
+# Paths
+input_path = "input.jpg"  # put your source image here (e.g. 1754890349715.jpg)
+output_path = "thumbnail_ronaldo_messi_bot.png"
+
+# Load image
+img = Image.open(input_path).convert("RGBA")
+
+# Resize/crop to 1280x720 (YouTube thumbnail)
+target_w, target_h = 1280, 720
+img_ratio = img.width / img.height
+target_ratio = target_w / target_h
+
+if img_ratio > target_ratio:
+    #
+
 
 ### **2️⃣ Script Style**
 
